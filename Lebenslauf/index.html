@@ -1,0 +1,290 @@
+<!-- Hey :) 
+     Dieser Teil hier steht nur da, um zu zeigen, dass ich nicht einfach blind alles mit KI generiert habe.
+     Gut, zugegeben: Natürlich hab ich mit KI gearbeitet und mir Ideen und Hilfe geholt und beweisen kann ich das hiermit wohl auch nicht, das dem nicht so ist. 
+     ABER! Ich kann wenigstens beweisen, dass ich hier wirklich drin gearbeitet habe und da du gearde im Quellcode bist, bist du wohl genau danach auf der Suche.
+     Fazit: Ich kann mindestens Kommentare schreiben und du lächelst jetzt vielleicht ein wenig :D.-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebenslauf - Steffy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="resume-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-header">
+                <img src="/img/Bewerbungsfoto.jpeg" alt="Stefanie Lang" class="profile-avatar">
+                <h1>Stefanie Lang</h1>
+                <p>Umschülerin zur Fachinformatikerin für Anwendungsentwicklung</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Kontakt</h3>
+                <ul class="contact-list">
+                    <li>📍 Halle (Saale)</li>
+                    <li>📧 <a href="mailto:lang.stefanie93@gmail.com" style="color: #a4b3a6;">lang.stefanie93@gmail.com</a></li>
+                    <li>📱 0171 12 64 720</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Skills</h3>
+                <ul class="skills-list">
+                    <li>Java</li>
+                    <li>HTML, CSS, PHP</li>
+                    <li>SQL & Datenbanken</li>
+                    <li>IntelliJ IDEA</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Tools</h3>
+                <ul class="skills-list">
+                    <li>IntelliJ IDEA</li>
+                    <li>MySQL</li>
+                    <li>Personio</li>
+                    <li>NICE WFM</li>
+                    <li>Kronos</li>
+                    <li>MS Office: Excel, Word, Power Point, Power Bi</li>
+                </ul>
+            </div>
+
+            <!-- Download Sektion -->
+            <div class="download-container">
+                <h3>Downloads</h3>
+                <div class="download-buttons">
+                    <a href="/pdf/Lebenslauf.pdf" download class="download-btn" target="_blank">
+                        📥 Lebenslauf PDF
+                    </a>
+                    <a href="/pdf/lang_stefanie-birgit_2026_09_22_09_09_43_zwischenzertifikat_ergebnisse.pdf" download class="download-btn" target="_blank">
+                        📜 Ausbildungs-Zertifikat PDF
+                    </a>
+                    <a href="/pdf/Praktikumsflyer.pdf" download class="download-btn" target="_blank">
+                        📄 Flyer Praktikumsinfos PDF
+                    </a>
+                    <a href="/pdf/Kalender.pdf" download class="download-btn" target="_blank">
+                        📄 Kalender Praktikum PDF
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <input type="radio" id="tab-beruf" name="resume-tabs" checked class="tab-input">
+            <input type="radio" id="tab-bildung" name="resume-tabs" class="tab-input">
+            <input type="radio" id="tab-projekte" name="resume-tabs" class="tab-input">
+            <input type="radio" id="tab-termine" name="resume-tabs" class="tab-input">
+
+            <div class="tab-nav">
+                <label for="tab-beruf" class="tab-label">Berufserfahrung</label>
+                <label for="tab-bildung" class="tab-label">Ausbildung & Weiterbildung</label>
+                <label for="tab-projekte" class="tab-label">Projekte</label>
+                <label for="tab-termine" class="tab-label">Termine</label>
+            </div>
+
+            <!-- Reiter 1 -->
+            <div class="tab-pane content-beruf">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">01.02.2021 - 31.05.2024</div>
+                        <h4>Workforce Manager WFM</h4>
+                        <div class="company">Invia Travel GmbH / Workforce Management</div>
+                        <p>Verantwortlich für die Dienstplanung von ca. 300 Mitarbeitern, Tagessteuerung und Datenanalyse sowie die Implementierung von Software-Tools und Datenmigrationen.</p>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">01.02.2021 - 31.05.2024</div>
+                        <h4>Real-Time-Analyst WFM</h4>
+                        <div class="company">Foundever GmbH / Workforce Management</div>
+                        <p>Verantwortlich für Tagessteuerung, Dienstplanung verschiedener Projekte, sowie die Implementierung und Admin-Verwaltung von neuen WFM Tools.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reiter 2 -->
+            <div class="tab-pane content-bildung">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">Aktuell</div>
+                        <h4>Umschulung zur Fachinformatikerin für Anwendungsentwicklung</h4>
+                        <div class="company">WBS Training, Halle</div>
+                        <p>Weiterbildung und Umschulung zur Fachinformatikerin mit dem Schwerpunkt Anwendungsentwicklung. Theoretische Ausbildung bei der WBS Training Halle mit intensiver Vorbereitung auf die IHK Abschlussprüfung</p>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">01.11.2017 - 30.06.2020</div>
+                        <h4>Ausbildung zur Pharmazeutisch kaufmännischen Angestellten</h4>
+                        <div class="company">Linden Apotheke, Pfaffenhofen a. d. Ilm</div>
+                        <p>Ausbildung in der Linden Apotheke in Pfaffenhofen zur Pharmazeutisch kaufmännischen Angestellten. </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reiter 3 -->
+            <div class="tab-pane content-projekte">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">Projektarbeit</div>
+                        <h4>Lern-RPG</h4>
+                        <div class="company">Eigenprojekt</div>
+                        <p>Konzeption und Entwicklung eines offenen Bildungs-Rollenspiels zur interaktiven Wiederholung von IT-Prüfungsinhalten (Hardware, Wirtschaft, Programmierung, Datenbanken) inkl. </p>
+                        <p><em>-> in Arbeit</em></p>
+                    </div>
+                </div>
+        
+            <div class="timeline-item">
+                <div class="timeframe">Projektarbeit</div>
+                    <h4>Career Dashboard</h4>
+                    <div class="company">Eigenprojekt</div>
+                    <p>Webbasierte Bewerbungs- und Projektplattform</p>
+                </div>
+            </div>
+
+            <!-- Reiter 4 -->
+            <div class="tab-pane content-termine">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">24.02.2027</div>
+                        <h4>Abschlussprüfung Teil 1</h4>
+                        <div class="company">IHK Halle (Saale)</div>
+                        <p>Schriftliche Abschlussprüfung Teil 1 </p>
+                    <br></div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">05.04.2027 – 15.11.2027</div>
+                        <h4>Pflichtpraktikum (Umschulung)</h4>
+                        <div class="company">WBS Training & Praxisbetrieb</div>
+                        <p>Absolvierung der vorgeschriebenen 6-monatigen Praxisphase als fester Bestandteil der Umschulung zur Fachinformatikerin für Anwendungsentwicklung.</p>
+                    </div>
+                </div>
+
+                <!-- Praktikums-Tabelle -->
+                <div class="table-container">
+                    <h3>Übersicht Praxisphasen & Termine</h3>
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                               <th>Von</th>
+                                <th>Bis</th>
+                                <th>Bezeichnung / Beschreibung</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-praktikum">
+                                <td>05.04.2027</td>
+                                <td>05.05.2027</td>
+                                <td>Praktikum</td>
+                            </tr>
+                            <tr class="row-urlaub">
+                                <td>06.05.2027</td>
+                                <td>06.05.2027</td>
+                                <td>Christi Himmelfahrt</td>
+                            </tr>
+                            <tr class="row-urlaub">
+                                <td>07.05.2027</td>
+                                <td>07.05.2027</td>
+                                <td>Urlaub</td>
+                            </tr>
+                            <tr class="row-praktikum">
+                                <td>10.05.2027</td>
+                                <td>14.05.2027</td>
+                                <td>Praktikum</td>
+                            </tr>
+                            <tr class="row-urlaub">
+                                <td>17.05.2027</td>
+                                <td>17.05.2027</td>
+                                <td>Pfingstmontag</td>
+                            </tr>
+                            <tr class="row-praktikum">
+                                <td>18.05.2027</td>
+                                <td>26.05.2027</td>
+                                <td>Praktikum</td>
+                            </tr>
+                            <tr class="row-urlaub">
+                                <td>27.05.2027</td>
+                                <td>27.05.2027</td>
+                                <td>Fronleichnam bzw. Urlaub</td>
+                            </tr>
+                            <tr class="row-praktikum">
+                                <td>28.05.2027</td>
+                                <td>23.07.2027</td>
+                                <td>Praktikum</td>
+                            </tr>
+                            <tr class="row-urlaub">
+                                <td>26.07.2027</td>
+                                <td>06.08.2027</td>
+                                <td>Urlaub</td>
+                            </tr>
+                            <tr class="row-praktikum">
+                                <td>09.08.2027</td>
+                                <td>17.09.2027</td>
+                                <td>Praktikum</td>
+                            </tr>
+                            <tr class="row-urlaub">
+                                <td>20.09.2027</td>
+                                <td>20.09.2027</td>
+                                <td>Weltkindertag bzw. Urlaub</td>
+                            </tr>
+                            <tr class="row-praktikum">
+                                <td>21.09.2027</td>
+                                <td>29.09.2027</td>
+                                <td>Praktikum</td>
+                            </tr>
+                            <tr class="row-pruefung">
+                                <td>30.09.2027</td>
+                                <td>20.10.2027</td>
+                                <td>Prüfungsvorbereitung für gestreckte IHK-Prüfung Teil 2 </td>
+                            </tr>
+                            <tr class="row-praktikum">
+                                <td>21.10.2027</td>
+                                <td>29.10.2027</td>
+                                <td>Praktikum</td>
+                            </tr>
+                            <tr class="row-urlaub">
+                                <td>01.11.2027</td>
+                                <td>01.11.2027</td>
+                                <td>Allerheiligen bzw. Urlaub</td>
+                            </tr>
+                            <tr class="row-praktikum">
+                                <td>02.11.2027</td>
+                                <td>15.11.2027</td>
+                                <td>Praktikum</td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                </div>
+            </div>
+            <p style="font-size: 17px; margin-top: -50px; margin-bottom: 10px;">*Urlaub ist Vorgabe der Schule, kann aber nach Absprache verschoben bzw. angepasst werden. </p><br>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">24.11.2027</div>
+                        <h4>Abschlussprüfung Teil 2</h4>
+                        <div class="company">IHK Halle (Saale)</div>
+                        <p>Schriftliche Abschlussprüfung Teil 2 + Projekt </p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeframe">25.01.2028</div>
+                        <h4>Abschlussprüfung Teil 2</h4>
+                        <div class="company">IHK Halle (Saale)</div>
+                        <p>Mündliche Abschlussprüfung Teil 2 </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

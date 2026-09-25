@@ -1,0 +1,337 @@
+:root {
+    --bg-color: #f4f6f3;
+    --card-bg: #ffffff;
+    --primary: #4a5d4e;
+    --primary-hover: #3b4b3e;
+    --primary-light: #e8ede9;
+    --text-main: #2c352d;
+    --text-muted: #616e63;
+    --border-color: #d8e0d9;
+    --sidebar-bg: #2d362e;
+    --sidebar-text: #f4f6f3;
+    --sidebar-muted: #a4b3a6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 21px;
+}
+
+.resume-container {
+    width: 100%;
+    max-width: 1500px;
+    background: var(--card-bg);
+    border-radius: 24px;
+    box-shadow: 0 20px 45px -5px rgba(44, 53, 45, 0.12), 0 12px 18px -8px rgba(44, 53, 45, 0.08);
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 60px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+/* Bewerbungsbild */
+.profile-avatar {
+    width: 180px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 auto 20px auto;
+    display: block;
+    box-shadow: 0 6px 16px rgba(74, 93, 78, 0.4);
+    border: 4px solid rgba(255, 255, 255, 0.15);
+}
+
+.profile-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.profile-header p {
+    color: var(--sidebar-muted);
+    font-size: 18px;
+}
+
+.sidebar-section h3 {
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #8da490;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.contact-list, .skills-list {
+    list-style: none;
+    font-size: 18px;
+    color: var(--sidebar-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: var(--sidebar-text);
+    font-size: 17px;
+}
+
+/* Container */
+.download-container {
+    margin-top: auto;
+}
+
+.download-container h3 {
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #8da490;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: linear-gradient(135deg, #5c7461, #4a5d4e);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 0 4px 12px rgba(74, 93, 78, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #68826d, #5c7461);
+}
+
+
+/* Main Content */
+.main-content {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-input {
+    display: none;
+}
+
+.tab-nav {
+    display: flex;
+    gap: 15px;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tab-label {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-label:hover {
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#tab-beruf:checked ~ .tab-nav label[for="tab-beruf"],
+#tab-bildung:checked ~ .tab-nav label[for="tab-bildung"],
+#tab-projekte:checked ~ .tab-nav label[for="tab-projekte"],
+#tab-termine:checked ~ .tab-nav label[for="tab-termine"] {
+    color: white;
+    background-color: var(--primary);
+}
+
+#tab-beruf:checked ~ .content-beruf,
+#tab-bildung:checked ~ .content-bildung,
+#tab-projekte:checked ~ .content-projekte,
+#tab-termine:checked ~ .content-termine {
+    display: block;
+}
+
+/* Timeline design */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 25px;
+    border-left: 3px solid var(--border-color);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.timeframe {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.timeline-item h4 {
+    font-size: 22px;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.company {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.timeline-item p {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+
+/* Tabelle in Timeline */
+.table-container h3 {
+    font-size: 20px;
+    color: var(--text-main);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.schedule-table th, 
+.schedule-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-table th {
+    background-color: var(--sidebar-bg);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.schedule-table tr.row-praktikum {
+    background-color: rgba(142, 179, 144, 0.18);
+}
+
+.schedule-table tr.row-urlaub {
+    background-color: rgba(243, 198, 35, 0.22);
+}
+
+.schedule-table tr.row-feiertag {
+    background-color: rgba(210, 210, 210, 0.4);
+}
+
+.schedule-table tr.row-pruefung {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.schedule-table tr:hover {
+    filter: brightness(1.25);
+}
+.schedule-table th:nth-child(1),
+.schedule-table td:nth-child(1),
+.schedule-table th:nth-child(2),
+.schedule-table td:nth-child(2) {
+    width: 20%;
+    white-space: nowrap;
+}
+
+.schedule-table th:nth-child(3),
+.schedule-table td:nth-child(3) {
+    width: 60%;
+}
